@@ -1,0 +1,3 @@
+The installation was complete! You can run the Program with a Desktop Shortcut (If you did) or you search: "QR-Code-Generator" with the search module.
+
+Let's create thousands of QR-Codes!
