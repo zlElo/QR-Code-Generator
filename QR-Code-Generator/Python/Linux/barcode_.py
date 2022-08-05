@@ -11,7 +11,7 @@ def generate_barcode():
         file = filedialog.asksaveasfilename(
         filetypes=[("svg file", ".svg")],
         defaultextension=".svg")
-        barcode.save(f'{file}.svg')
+        barcode.save(file)
         app.destroy()
         
 
