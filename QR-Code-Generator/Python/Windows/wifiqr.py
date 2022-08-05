@@ -11,7 +11,7 @@ def wifiQR():
         file = filedialog.asksaveasfilename(
         filetypes=[("png file", ".png")],
         defaultextension=".png")
-        img.save(f'{file}.png')
+        img.save(file)
         app.destroy()
 
 
