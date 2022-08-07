@@ -1,3 +1,4 @@
+from re import M
 import customtkinter
 from barcode import EAN13
 from tkinter import filedialog
@@ -12,7 +13,7 @@ def generate_barcode():
         file = filedialog.asksaveasfilename(
         filetypes=[("svg file", ".svg")],
         defaultextension=".svg")
-        barcode.save(file)
+        barcode.save(f'{file}.svg')
         app.destroy()
         
 
@@ -20,20 +21,20 @@ def generate_barcode():
     app.iconbitmap('icon.ico')
 
     # This is the section of code which creates the main window
-    app.geometry('175x150')
-    app.title('Wifi-QR-Code')
+    app.geometry('280x150')
+    app.title('Bar-Code')
 
 
     # This is the section of code which creates the a label
-    customtkinter.CTkLabel(app, text='12 stellige Nummer:').place(x=17, y=23)
+    label = customtkinter.CTkLabel(app, text='12 stellige Nummer:').place(x=65, y=23)
 
 
     # This is the section of code which creates a text input box
-    tInputNummer=customtkinter.CTkEntry(app)
+    tInputNummer=customtkinter.CTkEntry(app, width=240)
     tInputNummer.place(x=17, y=54)
 
     # This is the section of code which creates a button
-    customtkinter.CTkButton(app, text='Speichern', command=btnClickFunctionSpeichern).place(x=17, y=90)
+    customtkinter.CTkButton(app, text='Speichern', command=btnClickFunctionSpeichern, width=240).place(x=17, y=90)
     
     
     app.mainloop()

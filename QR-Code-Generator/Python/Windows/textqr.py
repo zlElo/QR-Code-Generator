@@ -22,7 +22,7 @@ def TextQR():
         file = filedialog.asksaveasfilename(
         filetypes=[("png file", ".png")],
         defaultextension=".png")
-        img.save(file)
+        img.save(f'{file}.png')
         app.destroy()
         
         
@@ -31,39 +31,39 @@ def TextQR():
     app.iconbitmap('icon.ico')
 
     # This is the section of code which creates the main window
-    app.geometry('175x297')
+    app.geometry('280x297')
     app.title('Text-QR-Code')
 
 
     # This is the section of code which creates the a label
-    customtkinter.CTkLabel(app, text='Nachricht/Text:').place(x=17, y=17)
+    customtkinter.CTkLabel(app, text='Nachricht/Text:').place(x=65, y=17)
 
 
     # This is the section of code which creates a text input box
-    tInputLink=customtkinter.CTkEntry(app)
+    tInputLink=customtkinter.CTkEntry(app, width=240)
     tInputLink.place(x=17, y=45)
 
 
     # This is the section of code which creates the a label
-    customtkinter.CTkLabel(app, text='Farbe:').place(x=17, y=85)
+    customtkinter.CTkLabel(app, text='Farbe:').place(x=65, y=85)
 
 
     # This is the section of code which creates a combo box
-    comboFarbe= customtkinter.CTkComboBox(app, values=['black', 'green', 'blue', 'purple', 'red'])
+    comboFarbe= customtkinter.CTkComboBox(app, values=['black', 'green', 'blue', 'purple', 'red'], width=240)
     comboFarbe.place(x=17, y=114)
 
 
     # This is the section of code which creates the a label
-    customtkinter.CTkLabel(app, text='Hintergrundfarbe: ').place(x=17, y=163)
+    customtkinter.CTkLabel(app, text='Hintergrundfarbe: ').place(x=65, y=163)
 
 
     # This is the section of code which creates a combo box
-    comboOneBackround= customtkinter.CTkComboBox(app, values=['white', 'slategray', 'cadetblue', 'powderblue', 'yellow'])
+    comboOneBackround= customtkinter.CTkComboBox(app, values=['white', 'slategray', 'cadetblue', 'powderblue', 'yellow'], width=240)
     comboOneBackround.place(x=17, y=192)
 
 
     # This is the section of code which creates a button
-    customtkinter.CTkButton(app, text='Speichern', command=btnClickFunction).place(x=17, y=245)
+    customtkinter.CTkButton(app, text='Speichern', command=btnClickFunction, width=240).place(x=17, y=245)
 
     
     app.mainloop()
