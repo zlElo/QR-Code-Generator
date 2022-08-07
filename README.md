@@ -33,5 +33,5 @@ python3 qr-code-generator.py
 
 **Picture:**
 
-![1](https://raw.githubusercontent.com/zlElo/QR-Code-Generator/main/QR-Code-Generator/Fotos/1-QR.png)
+![1](https://raw.githubusercontent.com/zlElo/QR-Code-Generator/main/QR-Code-Generator/Fotos/2.png)
 
